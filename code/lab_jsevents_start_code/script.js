@@ -2,6 +2,8 @@
 const enterBtn = document.getElementById("enter");
 const textInput = document.getElementById("new-todo");
 const toDoList = document.getElementById("list");
+const dateButton = document.getElementById("date-button");
+const date = document.getElementById("todays-date");
 
 //Enter Button Add Event Listener.
 enterBtn.addEventListener("click", () => {
@@ -19,8 +21,13 @@ enterBtn.addEventListener("click", () => {
     newItemButton.addEventListener("click", (event) => {
     const itemToRemove = event.target.parentNode;
     toDoList.removeChild(itemToRemove);
-    
     });
-
 });
+    //Date Button
+dateButton.addEventListener("click",()=>{
+    date.innerText = Date();
+})
+
+
+
 
